@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char** argv) {
     // Open video file
-    VideoCapture cap("example_video.mp4");
+    VideoCapture cap("/app/1.mp4");
 
     // Check if video file opened successfully
     if(!cap.isOpened()) {
