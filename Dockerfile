@@ -8,9 +8,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Jakarta
 
 
-ADD main.cpp .
+ADD . .
 ADD CMakeLists.txt .
-ADD sample_video .
 
 # Build and run
 RUN mkdir build && \
