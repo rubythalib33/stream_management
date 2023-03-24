@@ -71,7 +71,7 @@ void Camera::run() {
         lock_guard<mutex> lock(mutex_);
         current_frame_ = base64_frame;
         // give time sleep
-        this_thread::sleep_for(chrono::milliseconds(10));
+        this_thread::sleep_for(chrono::milliseconds(30));
     }
 
     cap.release();

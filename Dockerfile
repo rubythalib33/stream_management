@@ -7,9 +7,13 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Jakarta
 
+# Install Boost
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    libboost-system-dev
 
+# Add the application files
 ADD . .
-ADD CMakeLists.txt .
 
 # Build and run
 RUN mkdir build && \
