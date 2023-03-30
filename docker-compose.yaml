@@ -1,0 +1,8 @@
+version: '3'
+services:
+  stream:
+    image: stream:latest
+    ports:
+      - "9002:9002"
+    container_name: stream
+    restart: unless-stopped

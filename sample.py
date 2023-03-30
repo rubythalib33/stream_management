@@ -42,7 +42,7 @@ def main():
     while True:
         try:
             send_request(ws, "retrieve_stream", 1)
-            time.sleep(0.1)
+            time.sleep(0.03)
         except KeyboardInterrupt:
             break
 
