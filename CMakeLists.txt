@@ -10,7 +10,6 @@ include_directories(
     ${OpenCV_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
     ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/third_party/websocketpp
 )
 
 add_library(base64 ${CMAKE_SOURCE_DIR}/src/utility/base64.cpp)
@@ -19,14 +18,11 @@ add_library(camera ${CMAKE_SOURCE_DIR}/src/camera/camera.cpp)
 
 add_library(stream_management ${CMAKE_SOURCE_DIR}/src/camera/stream_management.cpp)
 
-add_library(websocket_server ${CMAKE_SOURCE_DIR}/src/camera/websocket_server.cpp)
-
 add_executable(main ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
 target_link_libraries(main 
     ${OpenCV_LIBS}
     ${Boost_LIBRARIES}
-    websocket_server
     stream_management
     camera
     base64

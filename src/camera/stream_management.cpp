@@ -1,4 +1,4 @@
-#include "../../include/camera/stream_management.h"
+#include <camera/stream_management.h>
 
 void StreamManagement::add_camera(int id, const std::string& url_path) {
     // Create a new camera object

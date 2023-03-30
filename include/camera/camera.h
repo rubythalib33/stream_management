@@ -3,6 +3,7 @@
 
 #include <string>
 #include <thread>
+#include <chrono>
 #include <mutex>
 #include <opencv2/opencv.hpp>
 #include "../utility/base64.h"
